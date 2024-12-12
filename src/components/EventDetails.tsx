@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 
 const EventDetails = () => {
@@ -28,7 +27,7 @@ const EventDetails = () => {
   return (
     <section id="event-details" className="py-20 bg-black/95 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-cyber text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+        <h2 className="text-3xl font-cyber text-center mb-12 text-[#bdff3d]">
           Event Details
         </h2>
 
@@ -39,8 +38,8 @@ const EventDetails = () => {
               className="cyber-card p-6 hover:scale-105 transition-transform duration-300"
             >
               <div className="flex flex-col items-center text-center">
-                <detail.icon className="w-8 h-8 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-cyber text-purple-400 mb-2">{detail.title}</h3>
+                <detail.icon className="w-8 h-8 text-[#bdff3d] mb-4" />
+                <h3 className="text-xl font-cyber text-[#bdff3d] mb-2">{detail.title}</h3>
                 <p className="text-gray-300">{detail.content}</p>
               </div>
             </div>
@@ -48,7 +47,7 @@ const EventDetails = () => {
         </div>
 
         <div className="mt-12 cyber-box p-8">
-          <h3 className="text-2xl font-cyber text-cyan-400 mb-6 text-center">
+          <h3 className="text-2xl font-cyber text-[#bdff3d] mb-6 text-center">
             Event Highlights
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -25,4 +25,30 @@
   }
 }
 
+
+/*Css for Sponseros motions */
+
+/* Add this CSS for the scrolling effect */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.sponsor-marquee {
+  display: flex;
+  flex-direction: row;
+  gap: 32px; /* Adjust this value based on your design */
+  animation: marquee 20s linear infinite; /* Adjust the speed of scrolling */
+}
+
+.sponsor-marquee img {
+  max-width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+
 /* Rest of the CSS remains the same */

@@ -29,7 +29,7 @@ const Prizes = () => {
   return (
     <section id="prizes" className="py-20 bg-black relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-cyber text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+        <h2 className="text-3xl font-cyber text-center mb-12 text-[#bdff3d]">
           Prizes & Rewards
         </h2>
 
@@ -43,7 +43,7 @@ const Prizes = () => {
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-r ${prize.gradient} mb-6`}>
                   <prize.icon className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-xl font-cyber text-cyan-400 mb-2">{prize.position}</h3>
+                <h3 className="text-xl font-cyber text-[#bdff3d] mb-2">{prize.position}</h3>
                 <p className="text-2xl font-bold text-white mb-4">{prize.prize}</p>
                 <ul className="space-y-2">
                   {prize.extras.map((extra, i) => (
@@ -56,7 +56,7 @@ const Prizes = () => {
         </div>
 
         <div className="mt-12 cyber-box p-8 text-center">
-          <h3 className="text-xl font-cyber text-purple-400 mb-4">Special Awards</h3>
+          <h3 className="text-xl font-cyber text-[#bdff3d] mb-4">Special Awards</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {['Best Solo Hacker', 'Most Innovative Solution', 'Best Team Spirit', 'Rising Star'].map((award, index) => (
               <div key={index} className="cyber-card p-4">
