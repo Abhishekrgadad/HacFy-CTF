@@ -25,7 +25,7 @@ const Header = () => {
               className="h-8 md:h-10 w-auto"
             />
             <h1 className="text-2xl md:text-3xl font-cyber text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 animate-pulse">
-              CTF
+              
             </h1>
           </div>
 
