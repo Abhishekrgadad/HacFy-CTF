@@ -24,7 +24,7 @@ const Registration = () => {
   return (
     <section id="registration" className="py-20 bg-black relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-cyber text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+        <h2 className="text-3xl font-cyber text-center mb-12 text-[#bdff3d] font-bold">
           Join the Battle
         </h2>
 
@@ -33,7 +33,7 @@ const Registration = () => {
             <div className="cyber-card p-6">
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-cyan-400 font-cyber mb-2">
+                  <label htmlFor="name" className="block text-[#bdff3d] font-cyber mb-2">
                     Hacker Name
                   </label>
                   <input
@@ -48,7 +48,7 @@ const Registration = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-cyan-400 font-cyber mb-2">
+                  <label htmlFor="email" className="block text-[#bdff3d] font-cyber mb-2">
                     Email
                   </label>
                   <input
@@ -63,7 +63,7 @@ const Registration = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="team" className="block text-cyan-400 font-cyber mb-2">
+                  <label htmlFor="team" className="block text-[#bdff3d] font-cyber mb-2">
                     Team Name (Optional)
                   </label>
                   <input
@@ -77,7 +77,7 @@ const Registration = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="experience" className="block text-cyan-400 font-cyber mb-2">
+                  <label htmlFor="experience" className="block text-[#bdff3d] font-cyber mb-2">
                     Experience Level
                   </label>
                   <select
@@ -99,7 +99,7 @@ const Registration = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-200 shadow-[0_0_20px_rgba(6,182,212,0.5)]"
+                className="inline-flex items-center px-8 py-4 text-lg font-bold border-2 border-[#dbff3d] text-[#dbff3d] rounded-lg hover:bg-[#dbff3d] hover:text-black transform hover:scale-105 transition-all duration-200"
               >
                 Register Now
               </button>
