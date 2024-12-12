@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Shield, Lock, Code, Search, FileDown } from 'lucide-react';
 
 const Hero = () => {
