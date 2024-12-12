@@ -46,12 +46,12 @@ const Hero = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#registration"
-            className="inline-block px-8 py-4 text-lg font-bold text-black bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg hover:from-cyan-500 hover:to-purple-600 transform hover:scale-105 transition-all duration-200 shadow-[0_0_20px_rgba(6,182,212,0.5)]"
+            className="inline-flex items-center px-8 py-4 text-lg font-bold border-2 border-[#dbff3d] text-[#dbff3d] rounded-lg hover:bg-[#dbff3d] hover:text-black transform hover:scale-105 transition-all duration-200"
           >
             Join the Battle
           </a>
           <a
-            href="/brochure.pdf"
+            href="/src/assets/Brochure.pdf"
             download
             className="inline-flex items-center px-8 py-4 text-lg font-bold border-2 border-[#dbff3d] text-[#dbff3d] rounded-lg hover:bg-[#dbff3d] hover:text-black transform hover:scale-105 transition-all duration-200"
           >

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -15,10 +15,11 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Sponsors />
         <About />
         <EventDetails />
         <Prizes />
-        <Sponsors />
+        {/* <Sponsors /> */}
         <Registration />
         <Contact />
       </main>
