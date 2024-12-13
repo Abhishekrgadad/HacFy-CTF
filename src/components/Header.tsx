@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center gap-2">
             <img 
-              src="./src/assets/logo.png"
+              src="/logo.png"
               alt="Xploit Xcape Logo" 
               className="h-8 md:h-10 w-auto"
             />
