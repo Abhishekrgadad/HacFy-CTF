@@ -1,6 +1,5 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import logo from '../assets/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +20,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center gap-2">
             <img 
-              src={logo}
+              src="./src/assets/logo.png"
               alt="Xploit Xcape Logo" 
               className="h-8 md:h-10 w-auto"
             />
