@@ -21,7 +21,7 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <img 
               src="/logo.png"
-              alt="Xploit Xcape Logo" 
+              alt="Xploit  Logo" 
               className="h-8 md:h-10 w-auto"
             />
             <h1 className="text-2xl md:text-3xl font-cyber text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 animate-pulse">
