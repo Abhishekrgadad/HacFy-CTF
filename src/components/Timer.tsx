@@ -71,4 +71,4 @@ const Timer = ({ targetDate }: TimerProps) => {
   );
 };
 
-export default Timer;
+export default Timer; 
