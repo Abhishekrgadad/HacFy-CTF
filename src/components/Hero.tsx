@@ -19,7 +19,7 @@ const Hero = () => {
           className="w-full h-full object-cover"
         >
           <source
-            src="src/assets/vedio4.mp4"
+            src="/vedio.mp4"
             type="video/mp4"
           />
         </video>
@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-cyber font-bold mb-8">
           <span className="text-[#dbff3d]">
-            <img src="src/assets/xploitpic.png" alt="Xploit Xcape Logo" className="inline h-[210px] w-auto mr-2.375rem" />
+            <img src="/xploitpic.png" alt="Xploit Xcape Logo" className="inline h-[210px] w-auto mr-2.375rem" />
           </span>
         </h1>
         <p className="text-xl sm:text-2xl text-white mb-8 font-cyber font-bold">
@@ -51,7 +51,7 @@ const Hero = () => {
             Join the Battle
           </a>
           <a
-            href="/src/assets/Brochure.pdf"
+            href="/Brochure.pdf"
             download
             className="inline-flex items-center px-8 py-4 text-lg font-bold border-2 border-[#dbff3d] text-[#dbff3d] rounded-lg hover:bg-[#dbff3d] hover:text-black transform hover:scale-105 transition-all duration-200"
           >

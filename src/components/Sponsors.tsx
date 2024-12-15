@@ -3,17 +3,19 @@ const Sponsors = () => {
     {
       tier: 'Platinum Sponsors',
       logos: [
-        '/src/assets/sponsor1.png',
-        '/src/assets/alvaslogo.png',
+        '/sponsor1.png',
+        '/sponsor2.png',
+        '/sponsor1.png',
+        '/sponsor2.png',
       ],
     },
     {
       tier: 'Gold Sponsors',
       logos: [
-        '/src/assets/sponsor1.png',
-        '/src/assets/alvaslogo.png',
-        '/src/assets/alvaslogo.png',
-        '/src/assets/sponsor1.png',
+        '/sponsor1.png',
+        '/sponsor2.png',
+        '/sponsor1.png',
+        '/sponsor2.png',
       ],
     },
   ];
