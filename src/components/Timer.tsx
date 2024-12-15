@@ -25,9 +25,9 @@ const Timer = ({ targetDate }: TimerProps) => {
   }, [targetDate]);
 
   const calculateTimeLeft = () => {
-    const target = new Date(storedTargetDate);
-    const now = new Date();
-    const difference = target.getTime() - now.getTime();
+    const target = new Date(storedTargetDate).getTime();
+    const now = Date.now(); // Gets UTC timestamp
+    const difference = target - now;
 
     if (difference > 0) {
       return {
@@ -71,4 +71,4 @@ const Timer = ({ targetDate }: TimerProps) => {
   );
 };
 
-export default Timer; 
+export default Timer;

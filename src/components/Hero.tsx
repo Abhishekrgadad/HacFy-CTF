@@ -3,8 +3,8 @@ import Timer from './Timer';
 
 const Hero = () => {
   // Calculate the target date 60 days from now
-  const currentDate = new Date();
-  const targetDate = new Date(currentDate.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString();
+  // const currentDate = new Date();
+  // const targetDate = new Date(currentDate.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString();
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -35,7 +35,7 @@ const Hero = () => {
           National Level 24-Hour CTF Hackathon
         </p>
         <div className="mb-12">
-          <Timer targetDate={targetDate} />
+          <Timer />
         </div>
         <div className="flex flex-wrap justify-center gap-6 mb-12">
           <Feature icon={Shield} text="Web Exploitation" />
