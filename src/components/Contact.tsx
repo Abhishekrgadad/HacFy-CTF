@@ -16,18 +16,18 @@ const Contact = () => {
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-purple-400" />
                 <a href="mailto:info@xploitxcape.com" className="text-gray-300 hover:text-[#bdff3d]">
-                  info@xploitxcape.com
+                  info@hacfy.com
                 </a>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="w-6 h-6 text-purple-400" />
-                <a href="tel:+1234567890" className="text-gray-300 hover:text-[#bdff3d]">
-                  +1 (234) 567-890
+                <a href="tel: give a call" className="text-gray-300 hover:text-[#bdff3d]">
+                  +918660767853
                 </a>
               </div>
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-purple-400" />
-                <span className="text-gray-300">Virtual & Physical Event</span>
+                <span className="text-gray-300 hover:text-[#bdff3d]">Virtual & Physical Event</span>
               </div>
               <div className="flex items-center space-x-4">
                 <Globe className="w-6 h-6 text-purple-400" />
