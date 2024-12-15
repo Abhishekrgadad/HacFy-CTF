@@ -11,35 +11,44 @@ interface TimerProps {
   targetDate: string; // ISO date string
 }
 
+const STORAGE_KEY = 'timerTargetDate';
+
 const Timer = ({ targetDate }: TimerProps) => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
+  // Get the stored target date or use the prop
+  const storedTargetDate = localStorage.getItem(STORAGE_KEY) || targetDate;
+
+  // Store the target date if it's not already stored
+  useEffect(() => {
+    if (!localStorage.getItem(STORAGE_KEY)) {
+      localStorage.setItem(STORAGE_KEY, targetDate);
+    }
+  }, [targetDate]);
+
+  const calculateTimeLeft = () => {
+    const target = new Date(storedTargetDate);
+    const now = new Date();
+    const difference = target.getTime() - now.getTime();
+
+    if (difference > 0) {
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      };
+    }
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  };
+
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    const target = new Date(targetDate);
-
     const timer = setInterval(() => {
-      const now = new Date();
-      const difference = target.getTime() - now.getTime();
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60)
-        });
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [storedTargetDate]);
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">

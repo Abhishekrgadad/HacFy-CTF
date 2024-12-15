@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Instagram, Twitter, Linkedin, Facebook, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/src/assets/logo.png" alt="Xploit Xcape Logo" className="w-25 h-10" />
+              <img src="/logo.png" alt="Xploit Xcape Logo" className="w-25 h-10" />
               
             </div>
             <p className="text-gray-300 mb-4">
@@ -16,10 +16,11 @@ const Footer = () => {
               24-hour national level CTF competition.
             </p>
             <div className="flex space-x-4">
-              <SocialLink href="#" icon={Twitter} />
-              <SocialLink href="#" icon={Github} />
-              <SocialLink href="#" icon={Linkedin} />
-              <SocialLink href="#" icon={Facebook} />
+              <SocialLink href="https://www.instagram.com/hacfy.co" icon={Instagram} />
+              <SocialLink href="mailto:info.hacfy@gmail.com" icon={Mail} />
+              <SocialLink href="https://www.linkedin.com/hacfy" icon={Linkedin} />
+              <SocialLink href="https://www.facebook.com/hacfy" icon={Facebook} />
+              <SocialLink href="https://x.com/hacfy" icon={Twitter} />
             </div>
           </div>
 

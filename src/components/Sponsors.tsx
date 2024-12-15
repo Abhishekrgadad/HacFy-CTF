@@ -18,6 +18,15 @@ const Sponsors = () => {
         '/sponsor2.png',
       ],
     },
+    {
+      tier: 'Silver Sponsors',
+      logos: [
+        '/sponsor1.png',
+        '/sponsor2.png',
+        '/sponsor1.png',
+        '/sponsor2.png',
+      ],
+    },
   ];
 
   return (
