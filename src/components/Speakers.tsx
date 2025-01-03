@@ -3,18 +3,22 @@ const Speakers = () => {
       {
         name: "Niels Hoekman",
         logo: "./Niels.jpg",
+        linkedin: "https://www.linkedin.com/in/nielshoekman/"
       },
       {
         name: "Pradeep Rao",
         logo: "./Pradeep Rao.jpg",
+        linkedin: "https://www.linkedin.com/in/rao-pradeep/"
       },
       {
         name: "Munish Sidana",
         logo: "./Munish Sidana.jpg",
+        linkedin: "https://www.linkedin.com/in/munish-cissp/"
       },
       {
         name: "Prasad Anumula",
         logo: "./Prasad Anumula.jpg",
+        linkedin: "https://www.linkedin.com/in/prasad-anumula/"
       },
     ];
   
@@ -29,9 +33,12 @@ const Speakers = () => {
           <div className="">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
               {partners.map((partner, index) => (
-                <div
+                <a
+                  href={partner.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={index}
-                  className="group relative transition-transform duration-300 hover:scale-105"
+                  className="group relative transition-transform duration-300 hover:scale-105 cursor-pointer"
                 >
                   <div className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center p-4 rounded-lg bg-black/50 border-2 border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
                     <img
@@ -46,7 +53,7 @@ const Speakers = () => {
                       {partner.name}
                     </span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

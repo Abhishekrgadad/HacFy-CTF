@@ -16,7 +16,7 @@ const neonBorderAnimation = `
 `;
 
 const Registration = () => {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     name: '',
     email: '',
     team: '',
@@ -29,12 +29,6 @@ const Registration = () => {
     console.log('Form submitted:', formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   return (
     <>

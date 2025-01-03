@@ -43,7 +43,6 @@ const Prizes = () => {
                   <prize.icon className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-cyber text-[#bdff3d] mb-2">{prize.position}</h3>
-                <p className="text-2xl font-bold text-white mb-4">{prize.prize}</p>
                 <ul className="space-y-2 font-bold font">
                   {prize.extras.map((extra, i) => (
                     <li key={i} className="text-gray-300 text-sm">{extra}</li>
