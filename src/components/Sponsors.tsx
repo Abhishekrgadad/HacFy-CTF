@@ -70,20 +70,6 @@ const Sponsors = () => {
             </div>
           </div>
         ))}
-
-        <div className="cyber-box p-8 text-center mt-12">
-          <h3 className="text-2xl font-cyber text-[#bdff3d]">Become a Sponsor</h3>
-          <p className="text-gray-300 mb-6">
-            Join us in shaping the future of cybersecurity. Partner with Xploit Xcape and connect
-            with top talent.
-          </p>
-          <a
-            href="mailto:sponsors@xploitxcape.com"
-            className="inline-flex items-center px-8 py-4 text-lg font-bold border-2 border-[#dbff3d] text-[#dbff3d] rounded-lg hover:bg-[#dbff3d] hover:text-black transform hover:scale-105 transition-all duration-200"
-          >
-            Get Sponsorship Details
-          </a>
-        </div>
       </div>
     </section>
   );
