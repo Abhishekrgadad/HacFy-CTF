@@ -8,6 +8,8 @@ import Sponsors from './components/Sponsors';
 import Registration from './components/Registration';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Association from './components/Association';
+import Speakers from './components/Speakers';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <main>
         <Hero />
         <Sponsors />
+        <Association />
+        <Speakers/>
         <About />
         <EventDetails />
         <Prizes />

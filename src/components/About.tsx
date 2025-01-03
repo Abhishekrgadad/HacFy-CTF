@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Shield, Users, Trophy, Briefcase } from 'lucide-react';
 
 const About = () => {
@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="py-20 bg-black relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="cyber-box p-8 relative">
-          <h2 className="text-3xl font-cyber text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#dbff3d] to-[#dbff3d]">
+          <h2 className="text-3xl font-cyber font-bold text-center mb-12 text-transparent  bg-clip-text bg-gradient-to-r from-[#dbff3d] to-[#dbff3d]">
             About Xploit Xcape
           </h2>
           
