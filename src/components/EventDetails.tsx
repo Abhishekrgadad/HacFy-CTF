@@ -5,7 +5,7 @@ const EventDetails = () => {
     {
       icon: Calendar,
       title: 'Date',
-      content: 'March 15-16, 2024',
+      content: 'March 29-30, 2025',
     },
     {
       icon: Clock,
