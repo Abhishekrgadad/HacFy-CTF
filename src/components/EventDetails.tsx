@@ -27,7 +27,7 @@ const EventDetails = () => {
   return (
     <section id="event-details" className="py-20 bg-black/95 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-cyber text-center mb-12 text-[#bdff3d]">
+        <h2 className="text-3xl font-cyber font-bold text-center mb-12 text-[#bdff3d]">
           Event Details
         </h2>
 

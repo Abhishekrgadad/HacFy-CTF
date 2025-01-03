@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-cyber font-bold mb-8">
           <span className="text-[#dbff3d]">
-            <img src="/xploitpic.png" alt="Xploit Xcape Logo" className="inline h-[210px] w-auto mr-2.375rem" />
+            <img src="/xploitlogo.png" alt="Xploit Xcape Logo" className="inline h-[210px] w-auto mr-2.375rem" />
           </span>
         </h1>
         <p className="text-xl sm:text-2xl text-white mb-8 font-cyber font-bold">

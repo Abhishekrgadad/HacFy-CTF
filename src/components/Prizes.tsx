@@ -1,26 +1,25 @@
-
-import { Trophy, Award, Gift } from 'lucide-react';
+import { Trophy, Award, Gift, Code, Lightbulb, Users, Star } from 'lucide-react';
 
 const Prizes = () => {
   const prizes = [
     {
       icon: Trophy,
       position: '1st Place',
-      prize: '₹1,00,000',
+      // prize: '₹1,00,000',
       extras: ['Job Opportunities', 'Premium Swag Kit', 'Certification'],
       gradient: 'from-yellow-400 via-yellow-500 to-yellow-600',
     },
     {
       icon: Award,
       position: '2nd Place',
-      prize: '₹50,000',
+      // prize: '₹50,000',
       extras: ['Internship Opportunities', 'Swag Kit', 'Certification'],
       gradient: 'from-gray-300 via-gray-400 to-gray-500',
     },
     {
       icon: Gift,
       position: '3rd Place',
-      prize: '₹25,000',
+      // prize: '₹25,000',
       extras: ['Mentorship Program', 'Swag Kit', 'Certification'],
       gradient: 'from-amber-600 via-amber-700 to-amber-800',
     },
@@ -29,7 +28,7 @@ const Prizes = () => {
   return (
     <section id="prizes" className="py-20 bg-black relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-cyber text-center mb-12 text-[#bdff3d]">
+        <h2 className="text-3xl font-cyber font-bold text-center mb-12 text-[#bdff3d]">
           Prizes & Rewards
         </h2>
 
@@ -37,7 +36,7 @@ const Prizes = () => {
           {prizes.map((prize, index) => (
             <div
               key={index}
-              className="cyber-card p-6 hover:scale-105 transition-transform duration-300"
+              className="cyber-card p-6"
             >
               <div className="flex flex-col items-center text-center">
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center bg-gradient-to-r ${prize.gradient} mb-6`}>
@@ -45,7 +44,7 @@ const Prizes = () => {
                 </div>
                 <h3 className="text-xl font-cyber text-[#bdff3d] mb-2">{prize.position}</h3>
                 <p className="text-2xl font-bold text-white mb-4">{prize.prize}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 font-bold font">
                   {prize.extras.map((extra, i) => (
                     <li key={i} className="text-gray-300 text-sm">{extra}</li>
                   ))}
@@ -56,11 +55,41 @@ const Prizes = () => {
         </div>
 
         <div className="mt-12 cyber-box p-8 text-center">
-          <h3 className="text-xl font-cyber text-[#bdff3d] mb-4">Special Awards</h3>
+          <h3 className="text-xl font-cyber text-[#bdff3d] mb-4 font-bold">Special Awards</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {['Best Solo Hacker', 'Most Innovative Solution', 'Best Team Spirit', 'Rising Star'].map((award, index) => (
-              <div key={index} className="cyber-card p-4">
-                <p className="text-gray-300">{award}</p>
+            {[
+              {
+                title: 'Best Solo Hacker',
+                description: 'Outstanding Individual Performance',
+                icon: Code,
+              },
+              {
+                title: 'Most Innovative Solution',
+                description: 'Breaking New Ground',
+                icon: Lightbulb,
+              },
+              {
+                title: 'Best Team Spirit',
+                description: 'Exceptional Collaboration',
+                icon: Users,
+              },
+              {
+                title: 'Rising Star',
+                description: 'Emerging Talent',
+                icon: Star,
+              }
+            ].map((award, index) => (
+              <div 
+                key={index} 
+                className="cyber-card p-6 hover:bg-opacity-80 transition-all duration-300"
+              >
+                <div className="flex flex-col items-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-[#bdff3d] bg-opacity-20 flex items-center justify-center">
+                    <award.icon className="w-6 h-6 text-[#bdff3d]" />
+                  </div>
+                  <h4 className="text-[#bdff3d] font-cyber text-lg">{award.title}</h4>
+                  <p className="text-gray-400 text-sm">{award.description}</p>
+                </div>
               </div>
             ))}
           </div>
