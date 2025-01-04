@@ -1,8 +1,11 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate()
   // const [isMuted, setIsMuted] = useState(true);
 
   const navItems = [
@@ -41,8 +44,10 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="#registration"
-              className="bg-[#dbff3d] text-black px-3 py-1.5 rounded-md hover:bg-[#c2e635] transition-all duration-300 text-xs uppercase tracking-wider font-medium hover:scale-110 hover:shadow-[0_0_15px_rgba(219,255,61,0.5)]"
+              onClick={()=>{
+                navigate("/register")
+              }}
+              className="bg-[#dbff3d] text-black px-3 py-1.5 rounded-md hover:bg-[#c2e635] transition-all duration-300 text-xs uppercase tracking-wider font-medium hover:scale-110 hover:shadow-[0_0_15px_rgba(219,255,61,0.5)] cursor-pointer"
             >
               Register Now
             </a>
