@@ -3,21 +3,29 @@ const Speakers = () => {
       {
         name: "Niels Hoekman",
         logo: "./Niels.jpg",
+        designation: "Senior Security Consultant",
+        company: "Ex Palo Alto",
         linkedin: "https://www.linkedin.com/in/nielshoekman/"
       },
       {
         name: "Pradeep Rao",
         logo: "./Pradeep Rao.jpg",
+        designation: "Director and Chief Architect",
+        company: "Kyndryl",
         linkedin: "https://www.linkedin.com/in/rao-pradeep/"
       },
       {
         name: "Munish Sidana",
         logo: "./Munish Sidana.jpg",
+        designation: "Head of Information Security",
+        company: "Rhenus Logistics",
         linkedin: "https://www.linkedin.com/in/munish-cissp/"
       },
       {
         name: "Prasad Anumula",
         logo: "./Prasad Anumula.jpg",
+        designation: "Founder & Director",
+        company: "RGESIndia",
         linkedin: "https://www.linkedin.com/in/prasad-anumula/"
       },
     ];
@@ -48,10 +56,16 @@ const Speakers = () => {
                     />
                     <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                   </div>
-                  <div className="mt-2 text-center">
-                    <span className="text-gray-400 group-hover:text-[#bdff3d] transition-colors duration-300 text-sm md:text-base">
+                  <div className="mt-2 text-center space-y-1">
+                    <span className="text-gray-400 group-hover:text-[#bdff3d] transition-colors duration-300 text-sm md:text-base font-semibold">
                       {partner.name}
                     </span>
+                    <p className="text-gray-500 text-small md:text-sm">
+                      {partner.designation}
+                    </p>
+                    <p className="text-white text-xs md:text-sm">
+                      {partner.company}
+                    </p>
                   </div>
                 </a>
               ))}
