@@ -14,19 +14,28 @@ interface TimerProps {
 const STORAGE_KEY = 'timerTargetDate';
 
 const Timer = ({ targetDate }: TimerProps) => {
-  // Get the stored target date or use the prop
-  const storedTargetDate = localStorage.getItem(STORAGE_KEY) || targetDate;
+  const [storedTargetDate, setStoredTargetDate] = useState<string | null>(null);
 
-  // Store the target date if it's not already stored
   useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) {
+    const savedDate = localStorage.getItem(STORAGE_KEY);
+
+    if(savedDate != targetDate){
+      localStorage.removeItem(STORAGE_KEY)
+    }
+
+    if (savedDate) {
+      setStoredTargetDate(savedDate);
+    } else {
+      setStoredTargetDate(targetDate);
       localStorage.setItem(STORAGE_KEY, targetDate);
     }
   }, [targetDate]);
 
   const calculateTimeLeft = () => {
+    if (!storedTargetDate) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
     const target = new Date(storedTargetDate).getTime();
-    const now = Date.now(); // Gets UTC timestamp
+    const now = Date.now();
     const difference = target - now;
 
     if (difference > 0) {
@@ -34,7 +43,7 @@ const Timer = ({ targetDate }: TimerProps) => {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        seconds: Math.floor((difference / 1000) % 60),
       };
     }
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -52,7 +61,10 @@ const Timer = ({ targetDate }: TimerProps) => {
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="w-20 h-20 flex items-center justify-center bg-black/70 border-2 border-white rounded-lg shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+      <div
+        className="w-20 h-20 flex items-center justify-center bg-black/70 border-2 border-white rounded-lg shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+        aria-label={`${label.toLowerCase()}: ${value}`}
+      >
         <span className="text-3xl font-bold text-[#dbff3d] font-cyber">
           {value.toString().padStart(2, '0')}
         </span>
@@ -61,14 +73,28 @@ const Timer = ({ targetDate }: TimerProps) => {
     </div>
   );
 
+  if (!storedTargetDate) {
+    return <p>Loading timer...</p>;
+  }
+
+  const isExpired = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0;
+
   return (
-    <div className="flex justify-center gap-4">
-      <TimeUnit value={timeLeft.days} label="DAYS" />
-      <TimeUnit value={timeLeft.hours} label="HOURS" />
-      <TimeUnit value={timeLeft.minutes} label="MINUTES" />
-      <TimeUnit value={timeLeft.seconds} label="SECONDS" />
+    <div className="flex justify-center gap-4" aria-live="polite">
+      {isExpired ? (
+        <p className="text-2xl font-bold text-white font-cyber">
+          The event has started or expired!
+        </p>
+      ) : (
+        <>
+          <TimeUnit value={timeLeft.days} label="DAYS" />
+          <TimeUnit value={timeLeft.hours} label="HOURS" />
+          <TimeUnit value={timeLeft.minutes} label="MINUTES" />
+          <TimeUnit value={timeLeft.seconds} label="SECONDS" />
+        </>
+      )}
     </div>
   );
 };
 
-export default Timer; 
+export default Timer;
