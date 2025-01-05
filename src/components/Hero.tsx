@@ -2,9 +2,10 @@ import { Shield, Lock, Code, Search, FileDown } from 'lucide-react';
 import Timer from './Timer';
 
 const Hero = () => {
-  // Calculate the target date 60 days from now
+
   const currentDate = new Date();
-  const targetDate = new Date(currentDate.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString();
+  const currentYear = currentDate.getFullYear();
+  const targetDate = new Date(`${currentYear}-03-04T00:00:00Z`).toISOString();
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
